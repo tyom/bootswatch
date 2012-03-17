@@ -1,0 +1,4 @@
+[submodule "swatchmaker/bootstrap"]
+	path = swatchmaker/bootstrap
+    url = git@github.com:tyom/bootstrap.git
+    ignore = untracked
