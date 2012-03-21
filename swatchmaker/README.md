@@ -1,5 +1,3 @@
-Tyom's [theme preview](http://tyom.net/swatch/)
-
 Create your own swatch
 ======================
 
