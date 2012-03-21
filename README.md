@@ -1,6 +1,6 @@
 ### Preview
 
-Check out the [preview](Tyom's [theme preview](http://tyom.net/swatch/) of Tyom's theme.
+Check out the [preview](http://tyom.net/swatch/) of Tyom's theme.
 
 ---
 
