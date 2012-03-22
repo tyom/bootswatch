@@ -25,6 +25,7 @@
     padding: 6px 10px;
     font-size: 16px;
     font-weight: 500;
+    margin-left: -10px;
 }
 .navbar-fixed-top .navbar-inner .brand {
     float: right;
@@ -54,13 +55,12 @@
             }
         }
         &:hover, &:active {
-            color: darken(@navbarDarker, 30);
-            background: fadeout(@navbarDarker, 70);
+            background: lighten(@navbarDarker, 12);
             text-shadow: 0 1px 0 darken(@navbarLighter, 5);
             color: inherit;
         }
         &:active {
-            background: fadeout(@navbarDarker, 40);
+            background: lighten(@navbarDarker, 6);
         }
     }
     &.open > a.dropdown-toggle {
@@ -68,8 +68,9 @@
     }
     
     &.active > a, &.active > a:hover, &.active > a:active {
-        background: @navbarDarker;
+        background: darken(@navbarDarker, 5);
         text-shadow: 0 -1px 0 darken(@navbarBaseColor, 30);
+        .box-shadow(inset 0 0 0 1px darken(@navbarBaseColor, 28));
     }
 }
 
@@ -144,7 +145,7 @@
 }
 
 .btn-primary {
-    .buttonBackground(lighten(#3c689f, 20), #3c689f);
+    .buttonBackground(lighten(@primaryButtonColor, 20), @primaryButtonColor);
     color: lighten(#3c689f, 60);
     text-shadow: 0 -1px 0 darken(#3c689f, 10);
 }
@@ -237,18 +238,17 @@ input, textarea, select, .uneditable-input {
 
 .progress {
     border: 1px solid fadeout(@black, 60);
-    height: 10px;
+    height: 8px;
     .border-radius(2em);
     
     .bar {
         height: 100%;
-        .border-radius(1em);
         border-right: 1px solid fadeout(#000, 90);
-        #gradient > .vertical(#149bdf, #0480be);
-        .box-shadow( inset 0 5px 0 fadeout(@white, 80) ~", " 
-                     inset 0 -3px 2px fadeout(@white, 80) ~", " 
-                     0 0 1px fadeout(@black, 70) ~", " 
-                     inset 0 2px 0 1px fadeout(@black, 94)
+        .border-radius(1em);
+        #gradient > .vertical(lighten(@primaryButtonColor, 25), lighten(@primaryButtonColor, 20));
+        .box-shadow( inset 0 4px 0 fadeout(@white, 80) ~", " 
+                     inset 0 -3px 2px fadeout(@white, 82) ~", " 
+                     0 0 1px fadeout(@black, 80)
                     );
     }
 }
