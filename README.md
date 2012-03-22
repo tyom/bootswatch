@@ -1,3 +1,10 @@
+### Preview
+
+Check out the [preview](http://tyom.net/swatch/) of Tyom's theme.
+
+---
+
+
 Bootswatch
 ==========
 
