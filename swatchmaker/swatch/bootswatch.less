@@ -78,18 +78,22 @@
 .navbar-search {
     margin: 4px 0 0;
 }
-.navbar-search .search-query, .navbar-search .search-query:focus {
+.navbar-search .search-query, 
+.navbar-search .search-query:hover,
+.navbar-search .search-query:focus {
     padding: 1px 10px;
     border: 1px solid @navbarDarker;
+    background: @navbarLighter;
     width: 100px;
-    .transition(width 100ms);
+    .transition(120ms ease-in);
     .placeholder(@navbarBaseColor);
     line-height: 16px;
 }
 .navbar-search .search-query:focus {
     width: 160px;
+    background: @white;
     border: 1px solid darken(@navbarDarker, 10);
-    .box-shadow(inset 0 0 2px @navbarLighter);
+    .box-shadow(inset 0 0 3px @navbarBaseColor);
     .placeholder(@navbarLighter);
 }
 
