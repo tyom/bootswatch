@@ -1,5 +1,5 @@
 // Bootswatch.less
-// Swatch: New Swatch
+// Swatch: Tyom's theme
 // -----------------------------------------------------
 
 // Generic
@@ -14,6 +14,35 @@
     width: 0;
     height: 0;
     vertical-align: middle;
+}
+
+.dropdown-toggle .caret {
+    .opacity(70);
+    border-width: 3px;
+    border-top-color: darken(@navbarDarker, 35);
+    position: relative;
+
+    &:after {
+        .caret;
+        position: absolute;
+        top: -2px;
+        left: -3px;
+        border-width: 3px;
+        border-top-color: lighten(@navbarBaseColor, 30);
+    }
+}
+.dropdown-toggle.btn-info .caret,
+.dropdown-toggle.btn-success .caret,
+.dropdown-toggle.btn-danger .caret,
+.dropdown-toggle.btn-warning .caret,
+.dropdown-toggle.btn-inverse .caret,
+.dropdown-toggle.btn-primary .caret {
+    border-top-color: fadeout(@white, 5);
+    
+    &:after {
+        top: -4px;
+        border-top-color: fadeout(@black, 80);
+    }
 }
 
 
@@ -40,23 +69,15 @@
         padding: 6px 10px;
         
         &.dropdown-toggle .caret {
-            .opacity(70);
-            border-width: 3px;
             border-top-color: darken(@navbarDarker, 35);
-            position: relative;
 
             &:after {
-                .caret;
-                position: absolute;
-                top: -2px;
-                left: -3px;
-                border-width: 3px;
                 border-top-color: lighten(@navbarBaseColor, 30);
             }
         }
         &:hover, &:active {
             background: lighten(@navbarDarker, 12);
-            text-shadow: 0 1px 0 darken(@navbarLighter, 5);
+            text-shadow: 0 1px 0 darken(@navbarLighter, 10);
             color: inherit;
         }
         &:active {
@@ -74,6 +95,7 @@
     }
 }
 
+// Search box
 
 .navbar-search {
     margin: 4px 0 0;
@@ -92,8 +114,8 @@
 .navbar-search .search-query:focus {
     width: 160px;
     background: @white;
-    border: 1px solid darken(@navbarDarker, 10);
-    .box-shadow(inset 0 0 3px @navbarBaseColor);
+    border: 1px solid darken(@navbarDarker, 20);
+    .box-shadow(inset 0 0 4px @navbarBaseColor);
     .placeholder(@navbarLighter);
 }
 
@@ -122,15 +144,22 @@
     border-color: desaturate(@navbarBaseColor, 10);
     
     &.btn-large {
-        .border-radius(.36em);
+        .border-radius(.4em);
     }
     &.btn-small {
         padding: 3px 8px;
-        .border-radius(.28em);
+        .border-radius(.32em);
     }
     &.btn-mini {
         padding: 2px 6px;
-        .border-radius(.24em);
+        .border-radius(.28em);
+    }
+    
+    &:hover, &:focus {
+        .transition(none);
+        .box-shadow( inset 0 1px 0 fadeout(@white, 85) ~","
+                     0 1px 0 fadeout(@black, 92)
+                    );
     }
 }
 .btn:active, .btn-group.open .dropdown-toggle {
@@ -155,7 +184,7 @@
 }
 
 .btn-info {
-    .buttonBackground(lighten(@infoText, 20), @infoText);
+    .buttonBackground(lighten(@infoText, 15), darken(@infoText, 5));
     color: #fff;
     text-shadow: 0 -1px 0 darken(@infoText, 10);
 }
